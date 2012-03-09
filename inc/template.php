@@ -657,6 +657,9 @@ function tpl_get_action($type) {
             }
             break;
         case 'media':
+        	if(!$INFO['writable']) {
+        		return false;
+        	}
             break;
         default:
             return '[unknown %s type]';
